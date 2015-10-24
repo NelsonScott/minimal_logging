@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = BetterLogging::VERSION
   spec.authors       = ["Scott Nelson"]
   spec.email         = ["Scott.D.Nelson@dartmouth.edu"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
+  spec.summary       = %q{Replace the default Rails Server log with shorter and more readable output.}
   spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
