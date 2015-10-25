@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Scott Nelson"]
   spec.email         = ["Scott.D.Nelson@dartmouth.edu"]
   spec.summary       = %q{Replace the default Rails Server log with shorter and more readable output.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.description   = %q{Replace the default Rails Server log with shorter and more readable output.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
