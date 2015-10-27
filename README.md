@@ -1,6 +1,6 @@
 # BetterLogging
 
-TODO: Write a gem description
+Better Logging removes some of the noise from the Rails Server log so you can focus on the most important events.  It also formats parameters and actions in a more readable way to quickly see what's going on.
 
 ## Installation
 
@@ -20,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+For best results I also recommend:
+ 1. Installing the [quiet assets gem](https://github.com/evrone/quiet_assets) to remove noisy logging from your assets.  
+ 2. Setting your log_level to `:info`
+ In config/environments/development.rb
+```ruby
+config.log_level = :info
+```
 
 ## Contributing
 
