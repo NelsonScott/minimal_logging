@@ -1,8 +1,5 @@
 require 'action_dispatch/http/parameter_filter'
 
-# module ActionDispatch::Http::FilterParameters
-#
-# end
 module ActionDispatch
   module Http
     module FilterParameters

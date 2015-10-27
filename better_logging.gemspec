@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'better_logging/version'
+require 'minimal_logging/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "better_logging"
-  spec.version       = BetterLogging::VERSION
+  spec.name          = "minimal_logging"
+  spec.version       = MinimalLogging::VERSION
   spec.authors       = ["Scott Nelson"]
   spec.email         = ["Scott.D.Nelson@dartmouth.edu"]
   spec.summary       = %q{Replace the default Rails Server log with shorter and more readable output.}
