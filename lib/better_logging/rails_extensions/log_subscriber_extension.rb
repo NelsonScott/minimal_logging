@@ -11,7 +11,6 @@ class ActionController::LogSubscriber
     format  = payload[:format]
     format  = format.to_s.upcase if format.is_a?(Symbol)
 
-    #TODO try centering again, remember that colorize adds chars
     info "#{payload[:action]}".upcase.colorize(:red) + " #{payload[:controller]}".colorize(:red)
 
     unless params.empty?
