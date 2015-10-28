@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["Scott.D.Nelson@dartmouth.edu"]
   spec.summary       = %q{Replace the default Rails Server log with shorter and more readable output.}
   spec.description   = %q{Replace the default Rails Server log with shorter and more readable output.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/NelsonScott/minimal_logging"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
