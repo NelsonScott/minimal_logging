@@ -3,7 +3,7 @@ require 'rails/railtie'
 module MinimalLogging
   class Railtie < Rails::Railtie
     config.minimal_logging = ActiveSupport::OrderedOptions.new
-    config.minimal_logging.enabled = false
+    config.minimal_logging.enabled = true
     config.minimal_logging.change_log_level = true
 
     config.after_initialize do |app|
