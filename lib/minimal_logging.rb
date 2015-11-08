@@ -1,12 +1,30 @@
 require "minimal_logging/version"
 
 module MinimalLogging
-  def self.setup(app)
-    Rails.logger.level = 1 if app.config.minimal_logging.change_log_level
-    require "minimal_logging/rails_extensions/action_view_log_subscriber_extension.rb"
-    require "minimal_logging/rails_extensions/filter_parameters_extension.rb"
-    require "minimal_logging/rails_extensions/log_subscriber_extension.rb"
-    require "minimal_logging/rails_extensions/logger_extension.rb"
+
+  class << self
+    attr_accessor :app
+
+    def setup(app)
+      self.app = app
+      set_log_level
+      apply_log_filters
+    end
+
+    def set_log_level
+      Rails.logger.level = 1 if minimal_config.change_log_level
+    end
+
+    def apply_log_filters
+      require "minimal_logging/rails_extensions/action_view_log_subscriber_extension.rb"
+      require "minimal_logging/rails_extensions/filter_parameters_extension.rb"
+      require "minimal_logging/rails_extensions/log_subscriber_extension.rb"
+      require "minimal_logging/rails_extensions/logger_extension.rb"
+    end
+
+    def minimal_config
+      app.config.minimal_logging
+    end
   end
 
   require 'minimal_logging/railtie' if defined?(Rails)
