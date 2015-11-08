@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "minimal_logging"
   spec.version       = MinimalLogging::VERSION
   spec.authors       = ["Scott Nelson"]
-  spec.email         = ["Scott.D.Nelson@dartmouth.edu"]
+  spec.email         = ["scott@scottdavidnelson.io"]
   spec.summary       = %q{Replace the default Rails Server log with shorter and more readable output.}
   spec.description   = %q{Replace the default Rails Server log with shorter and more readable output.}
   spec.homepage      = "https://github.com/NelsonScott/minimal_logging"
