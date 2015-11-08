@@ -9,31 +9,32 @@ To this
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this to your application's Gemfile:
 
 ```ruby
-gem 'minimal_logging'
+group :development do
+  gem 'minimal_logging'
+end
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it yourself:
 
     $ gem install minimal_logging
 
 ## Usage
 
-For best results I also recommend:
- 1. Installing the [quiet assets gem](https://github.com/evrone/quiet_assets) to remove noisy logging from your assets.  
- 2. Setting your log_level to `:info`
- In config/environments/development.rb
-```ruby
-config.log_level = :info
-```
+For best results I also recommend installing the [quiet assets gem](https://github.com/evrone/quiet_assets) to remove noisy logging from your assets.  
 
-If you need a more verbose log, you can turn off minimal_logging at any time by setting the config variable in application.rb
+ By default, minimal_logging will change your log_level to :info.  If you want to set the log_level yourself, you can turn off this behavior (either in application.rb or development.rb in config).
+ ```ruby
+ config.minimal_logging.change_log_level = false
+ ```
+
+If you need a more verbose log, you can turn off minimal_logging at any time.
 ```ruby
 config.minimal_logging.enabled = false
 ```
