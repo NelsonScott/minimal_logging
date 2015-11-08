@@ -1,6 +1,11 @@
 # MinimalLogging
-
 Minimal Logging removes some of the noise from the Rails Server log so you can focus on the most important events.  It also formats parameters and actions in a more readable way to quickly see what's going on.
+
+So you can go from this
+![Image of Normal Rails Log](http://i.imgur.com/UtmFpyt.png)
+
+To this
+![Image of Rails Log with Minimal Logging](http://i.imgur.com/o1fYDre.png)
 
 ## Installation
 
@@ -35,7 +40,7 @@ config.minimal_logging.enabled = false
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/minimal_logging/fork )
+1. Fork it ( https://github.com/nelsonscott/minimal_logging/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
