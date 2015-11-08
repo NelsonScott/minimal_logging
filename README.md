@@ -28,6 +28,11 @@ For best results I also recommend:
 config.log_level = :info
 ```
 
+If you need a more verbose log, you can turn off minimal_logging at any time by setting the config variable in application.rb
+```ruby
+config.minimal_logging.enabled = false
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/minimal_logging/fork )
