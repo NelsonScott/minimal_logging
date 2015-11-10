@@ -27,14 +27,19 @@ Or install it yourself:
 
 ## Usage
 
-For best results I also recommend installing the [quiet assets gem](https://github.com/evrone/quiet_assets) to remove noisy logging from your assets.  
+You can set minimal_logging's configuration options in application.rb or development.rb in your config.
 
- By default, minimal_logging will change your log_level to :info.  If you want to set the log_level yourself, you can turn off this behavior (either in application.rb or development.rb in config).
+By default, minimal_logging will change your log_level to :info.  If you want to set the log level yourself, you can turn this behavior off.
  ```ruby
  config.minimal_logging.change_log_level = false
  ```
 
-If you need a more verbose log, you can turn off minimal_logging at any time.
+You can turn logging assets back on.  Much of the logic for quietting assets thanks to the [quiet_assets](https://github.com/evrone/quiet_assets) gem.
+```ruby
+config.minimal_logging.quiet_assets = false
+```
+
+And you can turn off minimal_logging itself.
 ```ruby
 config.minimal_logging.enabled = false
 ```
