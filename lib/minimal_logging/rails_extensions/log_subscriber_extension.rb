@@ -37,15 +37,19 @@ class ActionController::LogSubscriber
 
   def format_message(status)
     if status < 300
-      status.to_s.colorize(:green)
+      color_status(status, :green)
     elsif status < 400
-      status.to_s.colorize(:yellow)
+      color_status(status, :yellow)
     elsif status < 500
-      status.to_s.colorize(:red)
+      color_status(status, :red)
     elsif status < 600
-      status.to_s.colorize(:light_red)
+      color_status(status, :light_red)
     else
-      status
+      status.to_s
     end
+  end
+
+  def color_status(status, color)
+    status.to_s.colorize(color)
   end
 end
