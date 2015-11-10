@@ -25,6 +25,16 @@ module MinimalLogging
     def minimal_config
       app.config.minimal_logging
     end
+
+    def quiet_assets?
+      minimal_config.quiet_assets
+    end
+
+    def assets_regex
+      paths = app.config.assets.prefix
+      paths = [ %r[\A/{0,2}#{paths}] ]
+      /\A(#{paths.join('|')})/
+    end
   end
 
   require 'minimal_logging/railtie' if defined?(Rails)
