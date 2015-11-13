@@ -36,20 +36,7 @@ class ActionController::LogSubscriber
   end
 
   def format_message(status)
-    if status < 300
-      color_status(status, :green)
-    elsif status < 400
-      color_status(status, :yellow)
-    elsif status < 500
-      color_status(status, :red)
-    elsif status < 600
-      color_status(status, :light_red)
-    else
-      status.to_s
-    end
-  end
-
-  def color_status(status, color)
+    color = MinimalLogging.color_codes[status / 100]
     status.to_s.colorize(color)
   end
 end
