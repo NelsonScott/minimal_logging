@@ -39,13 +39,9 @@ module MinimalLogging
     end
 
     def make_color_codes
-      color_hash = {}
-      color_hash[1] = color_hash[2] = :green
-      color_hash[3] = :yellow
-      color_hash[4] = :red
-      color_hash[5] = :light_red
-
-      color_hash
+      status_codes = [1, 2, 3, 4, 5]
+      colors = [:light_green, :green, :yellow, :red, :light_red]
+      Hash[status_codes.zip(colors)]
     end
   end
 
