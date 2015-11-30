@@ -40,8 +40,8 @@ Rails::Rack::Logger.class_eval do
   end
 
   def started_request_message(request)
-    method = request.request_method.colorize(:blue)
-    path = request.filtered_path.colorize(:magenta)
+    method = request.request_method.blue
+    path = request.filtered_path.magenta
     output = method + " " + path
   end
 end

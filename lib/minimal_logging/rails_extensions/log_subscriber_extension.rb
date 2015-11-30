@@ -10,13 +10,12 @@ class ActionController::LogSubscriber
     params  = payload[:params].except(*INTERNAL_PARAMS)
     format  = payload[:format]
     format  = format.to_s.upcase if format.is_a?(Symbol)
+    action  = "#{payload[:action]}".upcase.red
+    controller = " #{payload[:controller]}".red
 
-    info "#{payload[:action]}".upcase.colorize(:red) + " #{payload[:controller]}".colorize(:red)
-
-    unless params.empty?
-      info "  Params: ".colorize(:blue)
-      ap params
-    end
+    info(action + controller)
+    info "Format #{format}".light_magenta
+    info("Params".blue) && ap(params) unless params.empty?
   end
 
   def process_action(event)
